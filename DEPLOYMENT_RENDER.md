@@ -591,3 +591,17 @@ Perfect for:
 **Live URL**: `https://car-rental-system.onrender.com`
 
 Share it proudly! 🚀✨
+
+---
+
+## 🔐 GitHub Secrets for Auto-Deploy
+
+If you added the GitHub Actions workflow to trigger Render deploys, set these repository secrets in GitHub (Repository → Settings → Secrets & variables → Actions → New repository secret):
+
+- **RENDER_API_KEY**: create a Render API key (Dashboard → Account → API Keys → Create API Key). Use the key value as the secret.
+- **RENDER_SERVICE_ID**: the UUID of your Render Web Service (Dashboard → Your Service → Settings → Service ID).
+
+Once both secrets are configured, every push to `main` will trigger the workflow which calls the Render API to create a new deploy.
+
+Quick check (locally): to confirm your service ID you can run in the Render shell or via the dashboard — the Actions workflow requires the exact service UUID.
+
